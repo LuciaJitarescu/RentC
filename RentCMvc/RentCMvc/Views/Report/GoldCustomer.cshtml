@@ -1,0 +1,34 @@
+﻿@model IEnumerable<RentCMvc.Models.CustomerRents>
+
+@{
+    ViewBag.Title = "GoldCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GoldCustomer</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NrOfRents)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NrOfRents)
+        </td>
+       
+    </tr>
+}
+
+</table>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<RentCMvc.Models.CarsWithNumberOfRents>
+
+@{
+    ViewBag.Title = "CountRents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CountRents</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NrOfRents)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NrOfRents)
+        </td>
+       
+    </tr>
+}
+
+</table>

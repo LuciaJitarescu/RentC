@@ -1,0 +1,64 @@
+﻿@model IEnumerable<RentCMvc.Models.Rents>
+@{
+    ViewBag.Title = "ListRents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListRents</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostumerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservStatusID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CouponCode)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostumerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservStatusID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CouponCode)
+            </td>
+            
+        </tr>
+    }
+
+</table>
